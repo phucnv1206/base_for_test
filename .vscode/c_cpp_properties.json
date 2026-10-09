@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "name": "STM32F401RCTx",
+      "compilerPath": "C:/ST/STM32CubeIDE_2.2.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.win32_1.0.100.202602081740/tools/bin/arm-none-eabi-gcc.exe",
+      "compilerArgs": [
+        "-mcpu=cortex-m4",
+        "-mthumb",
+        "-mfpu=fpv4-sp-d16",
+        "-mfloat-abi=hard"
+      ],
+      "includePath": [
+        "${workspaceFolder}/Inc",
+        "${workspaceFolder}/Drivers/VL53L0X/Inc",
+        "${workspaceFolder}/Drivers/VL53L1X/Inc",
+        "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc",
+        "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+        "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+        "${workspaceFolder}/Drivers/CMSIS/Include"
+      ],
+      "defines": [
+        "DEBUG",
+        "USE_HAL_DRIVER",
+        "STM32F401xC"
+      ],
+      "cStandard": "gnu11",
+      "intelliSenseMode": "windows-gcc-arm"
+    }
+  ],
+  "version": 4
+}
+
+// To locate the ARM GCC compiler used by STM32CubeIDE, run this command in PowerShell:
+// Get-ChildItem "C:\ST" -Filter "arm-none-eabi-gcc.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -ExpandProperty FullName
+// If CubeIDE is installed elsewhere, replace "C:\ST" with its installation folder.
+// Copy the resulting full path into "compilerPath" above. This path is used by VS Code IntelliSense.
